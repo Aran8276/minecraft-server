@@ -1,18 +1,18 @@
 services:
   minecraft:
-  image: itzg/minecraft-server
-  volumes:
-    - minecraftdata:/data
-    - /home/aran8276/minecraft-server/plugins:/plugins
-  ports:
-   - 25565:25565
-  environment:
-    EULA: "TRUE"
-    TYPE: "BUKKIT"
-    OPS: "aran8276"
-  tty: true
-  stdin_open: true
-  restart: unless-stopped
+    image: itzg/minecraft-server
+    volumes:
+      - minecraftdata:/data
+      - /home/aran8276/minecraft-server/plugins:/plugins
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+      TYPE: "BUKKIT"
+      OPS: "aran8276"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
 volumes:
   minecraftdata:
     external: true
