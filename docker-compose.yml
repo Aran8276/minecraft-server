@@ -9,6 +9,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "FORGE"
+      ONLINE_MODE: "FALSE"
       OPS: "aran8276"
     tty: true
     stdin_open: true
