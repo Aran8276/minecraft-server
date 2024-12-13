@@ -17,8 +17,8 @@ services:
       OPS: |
         aran8276
       CREATE_CONSOLE_IN_PIPE: "TRUE"
-      tty: true
-      stdin_open: true
+      tty: "TRUE"
+      stdin_open: "TRUE"
       restart: unless-stopped
 volumes:
   minecraftdata:
