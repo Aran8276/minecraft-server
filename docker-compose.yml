@@ -7,13 +7,19 @@ services:
     ports:
       - 25565:25565
     environment:
+      CF_API_KEY: ${CF_API_KEY}
+      CURSEFORGE_FILES: |
+        https://www.curseforge.com/minecraft/mc-mods/skinrestorer/files/5957054
       EULA: "TRUE"
       TYPE: "FORGE"
+      SPAWN_PROTECTION: "0"
       ONLINE_MODE: "FALSE"
-      OPS: "aran8276"
-    tty: true
-    stdin_open: true
-    restart: unless-stopped
+      OPS: |
+        aran8276
+      CREATE_CONSOLE_IN_PIPE: "TRUE"
+      tty: true
+      stdin_open: true
+      restart: unless-stopped
 volumes:
   minecraftdata:
     external: true
