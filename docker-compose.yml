@@ -3,15 +3,22 @@ services:
     image: itzg/minecraft-server
     volumes:
       - minecraftdata:/data
-      - /home/aran8276/minecraft-server/plugins:/plugins
+      - ./plugins:/plugins
     ports:
-      - 25565:25565
+      - 19132:19132/udp
+      - 25565:25565/tcp
     environment:
-      CF_API_KEY: ${CF_API_KEY}
-      CURSEFORGE_FILES: |
-        https://www.curseforge.com/minecraft/mc-mods/skinrestorer/files/5957054
+      PAPER_CHANNEL: "experimental"
+      # CF_API_KEY: ${CF_API_KEY}
+      # CURSEFORGE_FILES: |
+      #   https://www.curseforge.com/minecraft/mc-mods/skinrestorer/files/5957054
+      MOTD: "Aran8276 Cross Platform Paper Server"
+      MAX_PLAYERS: 34
+      ENABLE_AUTOPAUSE: "FALSE"
+      PAUSE_WHEN_EMPTY_SECONDS: 86400
+      MAX_TICK_TIME: -1
       EULA: "TRUE"
-      TYPE: "FORGE"
+      TYPE: "PAPER"
       SPAWN_PROTECTION: "0"
       ONLINE_MODE: "FALSE"
       OPS: |
