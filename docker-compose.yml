@@ -2,7 +2,7 @@ services:
   minecraft:
     image: itzg/minecraft-server
     volumes:
-      - minecraft-data:/data
+      - ./minecraft-data:/data
       - ./plugins:/plugins
     ports:
       - 19132:19132/udp
